@@ -3,24 +3,24 @@
 //==================================== By NEPHELIM ============ 2024 =//
 
 // Colors Global -- --------------------------------------------------//
-$backgroundSite: #242424 !default;
+$backgroundSite: oklch(100% 3.5594404384177905e-8 106.37411429114086) !default;
 $backgroundSiteLight: #242424 !default;
-$backgroundSiteDark: #242424 !default;
+$backgroundSiteDark: oklch(14.95% 0.0999 267.73) !default;
 
-$backgroundFooter: #242424 !default;
-$backgroundHeader: #FF0042 !default;
+$backgroundFooter: oklch(14.95% 0.0999 267.73) !default;
+$backgroundHeader: oklch(96.88% 0.0328 159.44) !default;
 
 $backgroundGlobalElement: #9356dc !default;
 $colorGreyBackground : #FAFAFA;
 
 // Colors Components ------------------------------------------------//
-$colorMain : #f0ae7880;
-$colorSecondary : #FF007E;
-//$colorTernary : #f6e59f46;
+$colorMain : oklch(63.49% 0.1728 149.59);
+$colorSecondary : oklch(93.04% 0.0802 158.21);
+$colorTernary : oklch(96.88% 0.0328 159.44);
 $colorTernary : #93acff15;
 $colorWhite : #FFFFFF;
 $colorBlack : #000000;
-$colorGrey : #E3E3E3;
+$colorGrey : oklch(90.99% 0.0149 286.1);
 
 $backgroundCard: #F6F6F6 !default;
 $backgroundShadowLight: rgba(255, 255, 255, 0.5) !default;
@@ -29,7 +29,7 @@ $backgroundShadowLight: rgba(255, 255, 255, 0.5) !default;
 $colorTypoGrey : #757575;
 $colorTypoGreyBis :#312E2E;
 $colorTypoBlack : #000000;
-$colorTypoWhite : #ffffff;
+$colorTypoWhite : oklch(100% 3.5594404384177905e-8 106.37411429114086);
 
 // Mixins -----------------------------------------------------------//
 @mixin backgroundGradient($startColor, $endColor) {

@@ -1,14 +1,15 @@
 // IMPORT =============================================================
 
 import scssHeader from './header.module.scss';
-import Hero from '../../components/Hero';
+import Logo from '/logo.svg';
+////import Hero from '../../components/Hero';
 
 // Component ======================================================//
 const Header = () => {
   return (
     <header className={scssHeader.header}>
-      <Hero />
-      <p className={scssHeader.beta}>Beta early access only - v 0.3.1</p>
+      <div className={scssHeader.logo} ><image src={Logo} alt="logo" /></div>
+      <p className={scssHeader.beta}>Wealth Health</p>
     </header>
   );
 };
