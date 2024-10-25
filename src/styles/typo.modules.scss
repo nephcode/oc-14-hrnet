@@ -12,6 +12,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Codec Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../assets/fonts/codecpro.woff2) format('woff2');
+}
+
 
 $fontDefault : "Montserrat";
 $fontSizeRoot : 16px;
