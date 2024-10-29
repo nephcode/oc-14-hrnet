@@ -1,10 +1,10 @@
-//============================================= RETHAGON =============//
+//============================================= HR NET ===============//
 // HERO ==============================================================//
 //==================================== By NEPHELIM ============ 2024 =//
-@use 'src/styles/colors.module.scss' as colors;
+@use 'src/scss/colors.module.scss' as colors;
 
 .hero {
-    background-image: url('../../assets/common/backgroundbeta.jpg');
+    background-image: url('src/assets/common/backgroundbeta.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;

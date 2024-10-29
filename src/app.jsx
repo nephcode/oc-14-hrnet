@@ -9,7 +9,7 @@ import Header from './layouts/Header';
 import Home from './pages/Home';
 
 // STYLES ========================================================//
-import './styles/main.module.scss';
+import './scss/app.module.scss';
 
 // RENDER APPLICATION ============================================//
 const rootElement = document.getElementById('root');
