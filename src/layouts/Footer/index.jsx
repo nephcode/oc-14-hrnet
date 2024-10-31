@@ -3,7 +3,7 @@ import scssFooter from './footer.module.scss';
 const Footer = () => {
   return (
     <footer className={scssFooter.footer}>
-      <p>Rethagon // Forecast Game in Battle Rap</p>
+      <p>OC 14 // HR NET - Youcodeuse </p>
     </footer>
   );
 };

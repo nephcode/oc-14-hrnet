@@ -4,6 +4,7 @@
 @use "./colors.module.scss" as colors;
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
     font-family: 'Futura';
@@ -13,14 +14,14 @@
 }
 
 @font-face {
-    font-family: 'Codec Pro';
+    font-family: 'Jost';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(../assets/fonts/codecpro.woff2) format('woff2');
+    src: url('../assets/fonts/JostVariable.ttf') format('ttf');
 }
 
-$fontTitle : "Codec Pro";
+$fontTitle : "Jost";
 $fontDefault : "Montserrat";
 $fontSizeRoot : 16px;
 $fontSizeDefault : 1.0rem;
@@ -28,7 +29,7 @@ $fontSizeTitle : 1.2rem;
 
 h1 {
     font-size: 3rem;
-    font-family: "Codec Pro";
+    font-family: $fontTitle;
     font-weight: 400;
     text-transform: uppercase;
 
@@ -36,3 +37,13 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+// .jost-#{$uniquifier} {
+//     font-family: "Jost", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: #{$weight};
+//     font-style: normal;
+// }
