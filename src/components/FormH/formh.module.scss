@@ -1,13 +1,42 @@
+//============================================= RETHAGON =============//
+// FORM H ============================================================//
+//==================================== By NEPHELIM ============ 2024 =//
+
+// @USE STYLES =======================================================//
+@use '../../scss/colors.module.scss' as colors;
 @use '../../scss/form.module.scss' as form;
 
+// SECTION  ==========================================================//
+.formh {
+    max-width: 50%;
+
+    @media screen and (max-width: 768px) {
+        max-width: 95%;
+    }
+}
 
 fieldset {
     display: flex;
     flex-direction: column;
 
+    border: 0px solid transparent;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: colors.$colorTernary;
     color: black;
+
+    legend {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: colors.$colorTypoWhite;
+        background-color: colors.$colorMain;
+        padding: 10px;
+        border-radius: 8px;
+    }
 
     label {
         margin-bottom: 10px;
     }
+
+
 }
