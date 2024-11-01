@@ -5,10 +5,12 @@
 // @USE STYLES =======================================================//
 @use '../../scss/colors.module.scss' as colors;
 @use '../../scss/form.module.scss' as form;
+@use '../../scss/typo.module.scss' as typo;
 
 // SECTION  ==========================================================//
 .formh {
     max-width: 50%;
+    margin: 0 auto 20px auto;
 
     @media screen and (max-width: 768px) {
         max-width: 95%;
@@ -23,20 +25,25 @@ fieldset {
     border-radius: 8px;
     padding: 20px;
     background-color: colors.$colorTernary;
-    color: black;
+    color: colors.$colorBlack;
 
     legend {
-        font-size: 1.5rem;
-        font-weight: 500;
+        font-family: typo.$fontTitle;
+        font-size: 1.0rem;
+        font-weight: 300;
         color: colors.$colorTypoWhite;
         background-color: colors.$colorMain;
         padding: 10px;
         border-radius: 8px;
     }
 
-    label {
-        margin-bottom: 10px;
+    &>fieldset {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px solid colors.$colorMain;
     }
+
+
 
 
 }

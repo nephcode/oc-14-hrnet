@@ -2,26 +2,46 @@
 // FORM ==============================================================//
 //==================================== By NEPHELIM ============ 2024 =//
 @use './colors.module.scss' as colors;
+@use './typo.module.scss' as typo;
 
 
 // LABEL -------------------------------------------------------------//
 label {
+    font-family: typo.$fontTitle;
     color: colors.$colorTypoMain;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 // SELECT ------------------------------------------------------------//
 select {
+    width: 100%;
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
+    color: colors.$colorTypoBlack;
     background-color: colors.$colorWhite;
-    transition: border-color 0.25s;
+
+    &:focus {
+        border-color: colors.$colorMain;
+    }
+
+    option {
+        background-color: colors.$colorWhite;
+        color: colors.$colorTypoBlack;
+
+        &:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+
+        &:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    }
 }
 
 // INPUT -------------------------------------------------------------//
@@ -34,11 +54,23 @@ input[type="date"] {
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 400;
     font-family: inherit;
+    color: colors.$colorTypoBlack;
     background-color: colors.$colorWhite;
     transition: border-color 0.25s;
+    margin-bottom: 1rem;
+
+    &:focus {
+        border-color: colors.$colorMain;
+    }
+
+    &::placeholder {
+        color: colors.$colorTypoGrey;
+    }
 }
+
+
 
 // BUTTON ------------------------------------------------------------//
 

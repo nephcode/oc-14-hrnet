@@ -28,7 +28,10 @@ $fontSizeDefault : 1.0rem;
 $fontSizeTitle : 1.2rem;
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(1.6rem, 2.5vw, 3.2rem);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     font-family: $fontTitle;
     font-weight: 300;
     text-transform: uppercase;
