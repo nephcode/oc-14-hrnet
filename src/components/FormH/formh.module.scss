@@ -1,0 +1,10 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+
+    color: black;
+
+    label {
+        margin-bottom: 10px;
+    }
+}

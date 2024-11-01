@@ -1,4 +1,14 @@
+//============================================= HR NET ===============//
+// PAGE HOME =========================================================//
+//==================================== By NEPHELIM ============ 2024 =//
+@use '../../scss/colors.module.scss' as colors;
+//@use '../../scss/typo.module.scss' as typo;
+
 .home {
   width: 100%;
   margin: 0 auto;
+
+  h1 {
+    color: colors.$colorTypoMain;
+  }
 }

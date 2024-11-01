@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './layouts/Footer';
 import Header from './layouts/Header';
 import Home from './pages/Home';
-
+import Employee from './pages/Employee';
 // STYLES ========================================================//
 import './scss/app.module.scss';
 
@@ -20,6 +20,7 @@ if (rootElement) {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/employee" element={<Employee />} />
         </Routes>
         <Footer />
       </Router>
