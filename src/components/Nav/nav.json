@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "emoji": "👩‍💼",
+    "name": "Add Employee",
+    "link": "/"
+  },
+  {
+    "id": 2,
+    "emoji": "📔",
+    "name": "List Employees",
+    "link": "/employees"
+  }
+]

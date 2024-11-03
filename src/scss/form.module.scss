@@ -4,93 +4,91 @@
 @use './colors.module.scss' as colors;
 @use './typo.module.scss' as typo;
 
-
 // LABEL -------------------------------------------------------------//
 label {
-    font-family: typo.$fontTitle;
-    color: colors.$colorTypoMain;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+  font-family: typo.$fontTitle;
+  color: colors.$colorTypoMain;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 
 // SELECT ------------------------------------------------------------//
 select {
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    color: colors.$colorTypoBlack;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  margin-bottom: 1.0rem;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: colors.$colorTypoBlack;
+  background-color: colors.$colorWhite;
+
+  &:focus {
+    border-color: colors.$colorMain;
+  }
+
+  option {
     background-color: colors.$colorWhite;
+    color: colors.$colorTypoBlack;
 
-    &:focus {
-        border-color: colors.$colorMain;
+    &:nth-child(even) {
+      background-color: #f0f0f0;
     }
 
-    option {
-        background-color: colors.$colorWhite;
-        color: colors.$colorTypoBlack;
-
-        &:nth-child(even) {
-            background-color: #f0f0f0;
-        }
-
-        &:nth-child(odd) {
-            background-color: #ffffff;
-        }
+    &:nth-child(odd) {
+      background-color: #ffffff;
     }
+  }
 }
 
 // INPUT -------------------------------------------------------------//
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="date"] {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 400;
-    font-family: inherit;
-    color: colors.$colorTypoBlack;
-    background-color: colors.$colorWhite;
-    transition: border-color 0.25s;
-    margin-bottom: 1rem;
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='date'] {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  color: colors.$colorTypoBlack;
+  background-color: colors.$colorWhite;
+  transition: border-color 0.25s;
+  margin-bottom: 1rem;
 
-    &:focus {
-        border-color: colors.$colorMain;
-    }
+  &:focus {
+    border-color: colors.$colorMain;
+  }
 
-    &::placeholder {
-        color: colors.$colorTypoGrey;
-    }
+  &::placeholder {
+    color: colors.$colorTypoGrey;
+  }
 }
-
-
 
 // BUTTON ------------------------------------------------------------//
 
 button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: colors.$colorMain;
-    cursor: pointer;
-    transition: border-color 0.25s;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: colors.$colorMain;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
 button:hover {
-    border-color: colors.$colorMain;
+  border-color: colors.$colorMain;
 }
 
 button:focus,
 button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto -webkit-focus-ring-color;
 }

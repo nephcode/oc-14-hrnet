@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <main className={scssHome.home}>
       <div>
-        <h1 className={scssHome.Home}>Page Home Formulaire</h1>
+        <h1 className={scssHome.Home}>HR Net</h1>
       </div>
       <div>
         <Link to="/employee">Liste des employées</Link>
