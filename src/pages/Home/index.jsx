@@ -12,12 +12,7 @@ import scssHome from './home.module.scss';
 const Home = () => {
   return (
     <main className={scssHome.home}>
-      <div>
-        <h1 className={scssHome.Home}>HR Net</h1>
-      </div>
-      <div>
-        <Link to="/employee">Liste des employées</Link>
-      </div>
+      <h1>HR Net</h1>
       <FormEmployee />
     </main>
   );

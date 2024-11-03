@@ -1,7 +1,11 @@
+// import styles from "./styles.module.css";
+import scssTable from './table.module.scss';
+
+// Component =======================================================//
+
 const DataTable = () => {
   return (
-    <section>
-      <h1>DataTable</h1>
+    <section className={scssTable.dataSet}>
       <table>
         <thead>
           <tr>
@@ -22,3 +26,4 @@ const DataTable = () => {
   );
 };
 export default DataTable;
+// Export component ===============================================//

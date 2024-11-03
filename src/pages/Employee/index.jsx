@@ -13,11 +13,7 @@ import scssEmployee from './employee.module.scss';
 const Employee = () => {
   return (
     <main className={scssEmployee.employee}>
-      <div>
-        <h1>Current Employees</h1>
-        <p>Page de gestion des employées</p>
-        <Link to="/">Retour</Link>
-      </div>
+      <h1>Current Employees</h1>
       <DataTable />
     </main>
   );
