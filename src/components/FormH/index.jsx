@@ -1,5 +1,6 @@
 // Import Module ===================================================//
-
+//import { useState } from 'react';
+import { saveData } from '../../utils/db';
 // Import Data =====================================================//
 import mockData from './states.json';
 import mockDept from './department.json';
@@ -8,9 +9,18 @@ import scssFormh from './formh.module.scss';
 //import scssForm from '../../scss/form.module.scss';
 // Component =======================================================//
 const FormEmployee = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+    await saveData(data);
+  };
+
   return (
     <section id="formh" className={scssFormh.formh}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>New Employee</legend>
           <label htmlFor="firstName">First Name</label>
@@ -29,9 +39,9 @@ const FormEmployee = () => {
             <label htmlFor="city">City</label>
             <input type="text" id="city" name="city" />
             <label htmlFor="location">State</label>
-            <select>
+            <select name="location">
               {mockData.map((state) => (
-                <option key={state.abbreviation} id={state.abbreviation}>
+                <option key={state.abbreviation} value={state.abbreviation}>
                   {state.name}
                 </option>
               ))}
@@ -39,9 +49,10 @@ const FormEmployee = () => {
             <label htmlFor="zipcode">Zip Code</label>
             <input type="text" id="zipcode" name="zipcode" />
           </fieldset>
-          <select>
+          <label htmlFor="department">Department</label>
+          <select name="department">
             {mockDept.map((dept) => (
-              <option key={dept.id} id={dept.id}>
+              <option key={dept.id} value={dept.id}>
                 {dept.name}
               </option>
             ))}

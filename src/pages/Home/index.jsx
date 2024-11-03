@@ -1,6 +1,6 @@
 // Import Library =================================================//
-import { Link } from 'react-router-dom';
-
+//import { Link } from 'react-router-dom';
+import { saveData } from '../../utils/db';
 // Import component ===============================================//
 //import Hero from '../../components/Hero';
 //import ArtistSection from '../../layouts/Artist';
