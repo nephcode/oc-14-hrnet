@@ -1,9 +1,9 @@
 //======= ∵ ƸӜƷ ∴ ============================================//
 //======================= ∵ NƸAH ∴ ===========================//
 //================================================ 2024 ======//
-import { state } from "../factories/state";
-import { artistLikeCount } from "./domlinker";
-import { likeCounterDisplay } from "../factories/display";
+//import { state } from "../factories/state";
+//import { artistLikeCount } from "./domlinker";
+//import { likeCounterDisplay } from "../factories/display";
 
 //= CAPTURE GET V1.0 =========================================//
 export const idCapture = (source) => {
@@ -99,8 +99,20 @@ export const counterBack = (LikeMedia, LikeUser) => {
   return total;
 }
 
+// SHOW POPOVER ====================================================
+export const showPopover = (message, duration = 33000) => {
+  const popover = document.createElement('div');
+  popover.className = 'popover';
+  popover.textContent = message;
+  document.body.appendChild(popover);
+
+  setTimeout(() => {
+    document.body.removeChild(popover);
+  }, duration);
+};
+
 // COLORG ====================================================//
-export const colorg = (argument, color) => {
+export const corlog = (argument, color) => {
   const style = `color:${color};font-weight:bold`;
   console.log(`%c%s${argument}`, `${style}`);
 }

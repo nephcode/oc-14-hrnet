@@ -1,4 +1,5 @@
 // Import Module ===================================================//
+import { corlog, showPopover } from '../../utils/tools';
 //import { useState } from 'react';
 //import { saveData } from '../../utils/db';
 // Import Data =====================================================//
@@ -18,6 +19,7 @@ const FormEmployee = ({ db }) => {
     const data = Object.fromEntries(formData.entries());
     console.table(data); // affiche les données dans la console
     await db(data); //  inscrire dans la base de données
+    showPopover('Formulaire soumis avec succès !');
   }; //C'est du classique Vanilla JS (on connait)
 
   return (

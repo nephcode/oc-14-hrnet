@@ -1,6 +1,8 @@
 //============================================= HR NET ===============//
 // IndexedDB =========================================================//
 //==================================== By NEPHELIM ============ 2024 =//
+import { corlog } from "./tools";
+
 export const openDB = () => {
     return new Promise((resolve, reject) => {
 
@@ -32,13 +34,13 @@ export const saveData = async (data) => {
         store.add(data);
 
         transaction.oncomplete = () => {
-            console.log("Données enregistrées avec succès !");
+            corlog(`Données enregistrées avec succès ! ${data}`, "green");
         };
 
         transaction.onerror = (event) => {
-            console.error("Erreur lors de l'enregistrement :", event.target.error);
+            corlog(`Erreur lors de l'enregistrement : ${event.target.error}`, "red");
         };
     } catch (error) {
-        console.error("Erreur d'ouverture de la base de données :", error);
+        corlog(`Erreur d'ouverture de la base de données :, ${error}`, "red");
     }
 };
