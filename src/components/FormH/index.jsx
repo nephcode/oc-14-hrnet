@@ -1,6 +1,6 @@
 // Import Module ===================================================//
 //import { useState } from 'react';
-import { saveData } from '../../utils/db';
+//import { saveData } from '../../utils/db';
 // Import Data =====================================================//
 import mockData from './states.json';
 import mockDept from './department.json';
@@ -8,15 +8,17 @@ import mockDept from './department.json';
 import scssFormh from './formh.module.scss';
 //import scssForm from '../../scss/form.module.scss';
 // Component =======================================================//
-const FormEmployee = () => {
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+const FormEmployee = ({ db }) => {
+  console.log('db prop:', db); // vérifier que la prop db est bien reçue
+  // Je place ici la classique verif de l'envoi du formulaire
+  const handleSubmit = async (eventForm) => {
+    eventForm.preventDefault(); // bloque le GET
+    const form = eventForm.target; // cible le formulaire
+    const formData = new FormData(form); // récupère les données du formulaire
     const data = Object.fromEntries(formData.entries());
-    console.log(data);
-    await saveData(data);
-  };
+    console.table(data); // affiche les données dans la console
+    await db(data); //  inscrire dans la base de données
+  }; //C'est du classique Vanilla JS (on connait)
 
   return (
     <section id="formh" className={scssFormh.formh}>
@@ -57,7 +59,7 @@ const FormEmployee = () => {
               </option>
             ))}
           </select>
-          <button type="submit">Save</button>
+          <button>Save</button>
         </fieldset>
       </form>
     </section>

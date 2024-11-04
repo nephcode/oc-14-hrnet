@@ -1,6 +1,9 @@
 // Import Library =================================================//
 //import { Link } from 'react-router-dom';
 import { saveData } from '../../utils/db';
+
+console.log(typeof saveData); // devrait afficher 'function' si saveData est une fonction
+
 // Import component ===============================================//
 //import Hero from '../../components/Hero';
 //import ArtistSection from '../../layouts/Artist';
@@ -13,7 +16,7 @@ const Home = () => {
   return (
     <main className={scssHome.home}>
       <h1>HR Net</h1>
-      <FormEmployee />
+      <FormEmployee db={saveData} />
     </main>
   );
 };
