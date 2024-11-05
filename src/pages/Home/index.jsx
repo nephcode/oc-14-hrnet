@@ -13,6 +13,7 @@ import scssHome from './home.module.scss';
 
 // Component ======================================================//
 const Home = () => {
+  console.log('saveData:', saveData); // vérifier que saveData est bien passé
   return (
     <main className={scssHome.home}>
       <h1>HR Net</h1>
