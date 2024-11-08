@@ -2,6 +2,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 // COMPONENTS ====================================================//
 import Footer from './layouts/Footer';
@@ -16,14 +18,16 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/employee" element={<Employee />} />
-        </Routes>
-        <Footer />
-      </Router>
+      <Provider store={store} >
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/employee" element={<Employee />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </Provider>
     </StrictMode>
   );
 } else {
