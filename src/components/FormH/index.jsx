@@ -9,17 +9,18 @@ import mockDept from './department.json';
 import scssFormh from './formh.module.scss';
 //import scssForm from '../../scss/form.module.scss';
 // Component =======================================================//
-import Modal from 'styxdust'
+import Modal from 'styxdust';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setEmployeeField, clearEmployee, addEmployee } from '../../app/UserSlice';
-
-
-
+import {
+  setEmployeeField,
+  clearEmployee,
+  addEmployee,
+} from '../../app/UserSlice';
 
 const FormEmployee = ({ db }) => {
   const [modalIsDisplayed, setModalIsDisplayed] = useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const employee = useSelector((state) => state.user);
 
   const handleInputChange = (field, value) => {
@@ -40,11 +41,10 @@ const FormEmployee = ({ db }) => {
     // Afficher le message de succès
     setModalIsDisplayed(true);
 
-    dispatch(addEmployee(employee))
+    dispatch(addEmployee(employee));
 
-    dispatch(clearEmployee());  // Réinitialise le formulaire après enregistrement
+    dispatch(clearEmployee()); // Réinitialise le formulaire après enregistrement
   }; //C'est du classique Vanilla JS (on connait)
-
 
   return (
     <section id="formh" className={scssFormh.formh}>
@@ -52,22 +52,62 @@ const FormEmployee = ({ db }) => {
         <fieldset>
           <legend>New Employee</legend>
           <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" value={employee.firstName} onChange={(e) => handleInputChange('firstName', e.target.value)} />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={employee.firstName}
+            onChange={(e) => handleInputChange('firstName', e.target.value)}
+          />
           <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" value={employee.lastName} onChange={(e) => handleInputChange('lastName', e.target.value)} />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={employee.lastName}
+            onChange={(e) => handleInputChange('lastName', e.target.value)}
+          />
           <label htmlFor="dateBirth">Date of Birth</label>
-          <input type="date" id="dateBirth" name="dateBirth" value={employee.dateOfBirth} onChange={(e) => handleInputChange('dateOfBirth', e.target.value)} />
+          <input
+            type="date"
+            id="dateBirth"
+            name="dateBirth"
+            value={employee.dateOfBirth}
+            onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
+          />
           <label htmlFor="startMission">Start Date Mission</label>
-          <input type="date" id="startMission" name="startMission" value={employee.startDate} onChange={(e) => handleInputChange('startDate', e.target.value)} />
+          <input
+            type="date"
+            id="startMission"
+            name="startMission"
+            value={employee.startDate}
+            onChange={(e) => handleInputChange('startDate', e.target.value)}
+          />
 
           <fieldset>
             <legend>Adresse</legend>
             <label htmlFor="street">Street</label>
-            <input type="text" id="street" name="street" value={employee.street} onChange={(e) => handleInputChange('street', e.target.value)} />
+            <input
+              type="text"
+              id="street"
+              name="street"
+              value={employee.street}
+              onChange={(e) => handleInputChange('street', e.target.value)}
+            />
             <label htmlFor="city">City</label>
-            <input type="text" id="city" name="city" value={employee.city} onChange={(e) => handleInputChange('city', e.target.value)} />
+            <input
+              type="text"
+              id="city"
+              name="city"
+              value={employee.city}
+              onChange={(e) => handleInputChange('city', e.target.value)}
+            />
             <label htmlFor="location">State</label>
-            <select name="location" value={employee.state} onChange={(e) => handleInputChange('state', e.target.value)}>
+            <select
+              name="location"
+              value={employee.state}
+              onChange={(e) => handleInputChange('state', e.target.value)}
+            >
               {mockData.map((state) => (
                 <option key={state.abbreviation} value={state.abbreviation}>
                   {state.name}
@@ -75,10 +115,20 @@ const FormEmployee = ({ db }) => {
               ))}
             </select>
             <label htmlFor="zipcode">Zip Code</label>
-            <input type="text" id="zipcode" name="zipcode" value={employee.zipCode} onChange={(e) => handleInputChange('zipCode', e.target.value)} />
+            <input
+              type="text"
+              id="zipcode"
+              name="zipcode"
+              value={employee.zipCode}
+              onChange={(e) => handleInputChange('zipCode', e.target.value)}
+            />
           </fieldset>
           <label htmlFor="department">Department</label>
-          <select name="department" value={employee.department} onChange={(e) => handleInputChange('department', e.target.value)}>
+          <select
+            name="department"
+            value={employee.department}
+            onChange={(e) => handleInputChange('department', e.target.value)}
+          >
             {mockDept.map((dept) => (
               <option key={dept.id} value={dept.id}>
                 {dept.name}
@@ -94,8 +144,10 @@ const FormEmployee = ({ db }) => {
         onCloseModal={() => setModalIsDisplayed(false)}
         content={
           <div id="confirmation" className="modal">
-            <p className="modal-text">Employé créé avec succès !</p>
-            <p className="modal-subtext">Cliquez sur la croix pour fermer.</p>
+            <p className={scssFormh.modalText}>Employé.e créé avec succès !</p>
+            <p className={scssFormh.modalSubtext}>
+              Cliquez sur la croix pour fermer.
+            </p>
           </div>
         }
       />

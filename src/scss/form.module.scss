@@ -31,8 +31,9 @@ select {
   }
 
   option {
-    background-color: colors.$colorWhite;
     color: colors.$colorTypoBlack;
+    background-color: colors.$colorWhite;
+
 
     &:nth-child(even) {
       background-color: #f0f0f0;

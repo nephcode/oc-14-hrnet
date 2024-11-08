@@ -8,32 +8,38 @@ Jquery migration to React
 
 ## PROJECT DELIVERIES
 
-| WHAT FOR               | WHEN         |
-| :--------------------- | ------------ |
-| Deadline MVP           | `SOON` |
+| WHAT FOR               | WHEN          |
+| :--------------------- | ------------- |
+| Deadline MVP           | `SOON`        |
 | Deadline CERTIFICATION | `AS POSSIBLE` |
-
 
 ## INFORMATIONS
 
-| WHERE     | URL                                    |
-| :-------- | -------------------------------------- |
-| Discord   | [#](#)                                 |
-| Instagram | [https://www.instagram.com/](#)        |
-| www       | [#underconstution](#underconstruction) |
+| WHERE   | URL                                         |
+| :------ | ------------------------------------------- |
+| Staging | [OC 14 HRNET ](https://oc14.youcodeuse.com) |
 
-| WHO IS   | FOR             |      COMPANY      | CONTACT | DISCORD |
-| :------- | --------------- | :---------------: | ------- | :-----: |
-| Nephelim | Head of concept | Underconstruction | #       |   YES   |
+| WHO IS   | FOR             |   COMPANY    | CONTACT | DISCORD |
+| :------- | --------------- | :----------: | ------- | :-----: |
+| Nephelim | Head of concept | Illuminateam | #       |   YES   |
 
 ## TECHNO
 
-| TECHNO   | SPEC   |
-| :------- | ------ |
-| FRONTEND | `SASS` |
+| TECHNO   | SPEC           |
+| :------- | -------------- |
+| FRONTEND | `SASS` `REACT` |
+| BUNDLER  | `VITE`         |
+| LIBRARY  |
 
 ## RUNNING THE APPS
 
+Install and dev >>
 
+`npm run dev`
+
+Build & preview the app
+
+`npm run build`
+`npm run preview`
 
 ![Cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/oc-react/readme-footer-oc-react-14.png)
