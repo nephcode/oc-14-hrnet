@@ -29,7 +29,7 @@ Jquery migration to React
 | :------- | -------------- |
 | FRONTEND | `SASS` `REACT` |
 | BUNDLER  | `VITE`         |
-| LIBRARY  |
+| LIBRARY  | `STYXDUST`     |
 
 ## RUNNING THE APPS
 
